@@ -5,13 +5,13 @@
 const char* ssid = "Param"; 
 const char* password = "9582@paramsingh";
 
-int Relay = D2;
+int Relay = D1;
+int LED = D2;
 
-WiFiServer server(80);
 WiFiClient client;
 
 unsigned long myChannelNumber =  1107673; //Your Channel Number (Without Brackets)
-const char * myReadAPIKey = "xxxxxxxxxx"; //Your Write API Key
+const char * myReadAPIKey = "xxxxxxxxxxx"; //Your Write API Key
 
 void setup() {
   Serial.begin (115200);
@@ -19,7 +19,9 @@ void setup() {
 
   pinMode(Relay, OUTPUT);
   digitalWrite(Relay, LOW);
-  
+
+  pinMode(LED, OUTPUT);
+
   //CONNECT TO WIFI NETWORK 
   Serial.println();
   Serial.println();
@@ -29,16 +31,16 @@ void setup() {
   WiFi.begin(ssid, password);
 
   while (WiFi.status() != WL_CONNECTED){
-    delay(1000);
+    delay(300);
+    digitalWrite(LED, HIGH);
     Serial.print(".");
+    delay(100);
+    digitalWrite(LED, LOW);
   }
   
   Serial.println("");
   Serial.println("WiFi connected");
-  
-  //START THE SERVER
-  server.begin ();
-  Serial.println("Server Started");
+  digitalWrite(LED, HIGH);
   
   //Print the IP address 
   Serial.println("Use this URL to connect:");
