@@ -2,8 +2,8 @@
 #include <WiFiClient.h>
 #include <ThingSpeak.h>
 
-const char* ssid = "Param"; 
-const char* password = "9582@paramsingh";
+const char* ssid = "your SSID"; 
+const char* password = "your password";
 
 int Relay = D1;
 int LED = D2;
@@ -11,7 +11,7 @@ int LED = D2;
 WiFiClient client;
 
 unsigned long myChannelNumber =  1107673; //Your Channel Number (Without Brackets)
-const char * myReadAPIKey = "xxxxxxxxxxx"; //Your Write API Key
+const char * myReadAPIKey = "YBBFTDBQ1R1JHNKT"; //Your Write API Key
 
 void setup() {
   Serial.begin (115200);
