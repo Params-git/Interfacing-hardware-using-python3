@@ -42,13 +42,13 @@ if __name__ == '__main__':
     while True:
         query = takecommand()
         if query == "turn on light":
-            data = urllib.request.urlopen("https://api.thingspeak.com/update?api_key=3RRK24AR99TIRNOQ&field1=" + str(1));
+            data = urllib.request.urlopen("https://api.thingspeak.com/update?api_key=3R9TIRNOQ&field1=" + str(1));
             print("LED turned ON")
             speak("LED turned ON")
             time.sleep(1)
 
         if query == 'turn off light':
-            data = urllib.request.urlopen("https://api.thingspeak.com/update?api_key=3RRK24AR99TIRNOQ&field1=" + str(0));
+            data = urllib.request.urlopen("https://api.thingspeak.com/update?api_key=3RRK249TINOQ&field1=" + str(0));
             print("LED turned OFF")
             speak("LED turned OFF")
             time.sleep(1)

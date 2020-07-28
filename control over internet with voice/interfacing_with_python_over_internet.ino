@@ -11,7 +11,7 @@ WiFiServer server(80);
 WiFiClient client;
 
 unsigned long myChannelNumber =  1107673; //Your Channel Number (Without Brackets)
-const char * myReadAPIKey = "YBBFTDBQ1R1JHNKT"; //Your Write API Key
+const char * myReadAPIKey = "xxxxxxxxxx"; //Your Write API Key
 
 void setup() {
   Serial.begin (115200);
