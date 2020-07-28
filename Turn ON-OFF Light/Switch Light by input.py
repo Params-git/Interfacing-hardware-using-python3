@@ -11,7 +11,7 @@ print ("Enter turn ON to LED on and turn OFF to LED off")
 if __name__ == '__main__':
     while True:
  
-        query = input("enter")
+        query = input("Enter: ")
         if query == 'turn on':
             Serial.write(b'turn on') 
             print("LED turned ON")
